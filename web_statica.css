@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css?family=Public+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    text-decoration: none;
+}
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
+html{
+    height: 100%;     
+}
+body{
+    font-family: "Public Sans", sans-serif;         /*La primera opción corresponde a la fuente importada*/
+    min-height: 100%;                               /*Permite ocupar todo el alto del body segun las dimensiones de la ventana*/
+
+    background-color: rgb(0, 0, 0);
+}
+/* --------------------- AJUSTES DE HEADER */
+
+.item-header{    
+    text-align: center;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: space-evenly;    
+}
+.menu ul li a{
+    font-size: 16px;
+    padding: 2px;
+    background-color: rgba(0, 0, 0, .75);
+    border-radius: 10%;
+    color:rgba(224, 224, 241, 0.795)
+}
+.menu ul li a:hover{
+    background-color: rgb(74, 213, 248);
+    color:rgba(255, 255, 255, 0.836)
+}
+.menu ul li a:active{
+    background-color:rgba(100, 6, 6, 0.952);
+}
+.foto{    
+    height: 40%;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 50%;
+    width: 66px;
+
+    flex-grow: 0;
+    
+    object-fit: cover;
+    object-position: center;
+}
+.info{
+    min-width: 280px;
+    flex: 3;
+}
+.info h3{
+    font-size: 22px;
+    padding: 2px;
+    color: rgb(245, 245, 245);
+    font-weight: 500;
+    text-shadow:10px 10px 10px  black;
+}
+.info p{
+    font-size: 20px;
+    padding: 6px;
+    color: rgb(74, 213, 248);
+    font-weight: 500;
+    text-decoration: underline;
+    text-shadow:4px 4px 10px  rgb(0, 0, 0);
+}
+.menu-nav{
+    min-width: 300px;
+    flex: 4;
+    align-self: flex-end;    
+}
+
+/* --------------------- AJUSTES DE SECTION */
+section h3{
+    color: rgba(44, 233, 44, 0.842); 
+    align-self: center;
+}
+.item-section{
+    background-color: rgb(49, 75, 161);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 10%;
+
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+
+    margin: 10px;
+    height: 70px;
+
+    transition: 1s;
+}
+
+.bloque{
+    flex: 1;    
+}
+.item-section p{
+    text-align: center;
+    align-self: center;
+    font-size: 18px;
+    font-weight: 500;
+    color:rgb(255, 255, 255);
+    text-shadow:6px 6px 16px  rgb(0, 0, 0);
+
+    visibility: hidden;
+}
+.item-section img{  
+    margin-top: 14px;
+    margin-right: 40px;
+    max-height: 40px;
+    max-width: 80px;
+    min-width: 0%;
+    border-radius: 50%;
+}
+.item-section:hover > p{
+    visibility: visible;
+}
+.item-section:hover{
+    background-color: rgb(74, 213, 248);;
+    width: 50%;
+    
+}
+
+/* ------------------------- AJUSTES DE MAIN */
+main{
+    padding: 20px;
+}
+.zeta-index{
+    position: relative;
+
+    display: flex;
+    flex-wrap: nowrap;
+
+    width: 100%;
+    height: 500px;    
+}
+.main-foto{
+    position: absolute;
+    height: 120px;
+    width: 120px;
+
+    object-fit: cover;
+    padding: 10px;
+
+    transition: 1s;
+}
+.foto-z1{
+    background-color: rgba(240, 248, 255, 0.788);    
+    top: 20px;
+    left:20px;
+    z-index: 10;
+}
+.foto-z2{
+    background-color: rgba(233, 196, 32, 0.815);
+    top: 30px;
+    left:30px;
+    z-index: 20;
+}
+.foto-z3{
+    background-color: rgba(80, 140, 192, 0.795);
+    top: 40px;
+    left:40px;
+    z-index: 30;
+}
+.foto-z4{
+    background-color: rgba(226, 76, 216, 0.801);
+    top: 50px;
+    left:50px;
+    z-index: 40;
+}
+.zeta-index:hover >.foto-z2{
+    top: 20%;
+    left:30%;
+}
+.zeta-index:hover >.foto-z3{
+    top: 35%;
+    left:50%;
+}
+.zeta-index:hover >.foto-z4{
+    top: 50%;
+    left:10%;
+}
+main h3{
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgba(44, 233, 44, 0.842); 
+    text-align: center;
+    text-shadow:6px 6px 16px  rgb(0, 0, 0);
+}
+main p{
+    color: rgba(255, 255, 255, 0.938);
+}
+
+/* ------------------------- AJUSTES DE FORM */
+.formulario{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    align-items: center;
+}
+
+form{
+    height: 100%;
+    width: 70%;
+
+    padding: 20px;
+    margin: 10px;
+
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: rgb(74, 213, 248);;
+}
+.formulario h3{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgba(44, 233, 44, 0.842); 
+    text-align: center;
+}
+
+input{    
+    /* ESTO ES PARA INHABILITAR TODA LA APARIENCIA QUE VIENE PRE-DETERMINADA (Aunque no se si sea del todo necesario)
+    border:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* ------------------------------------------------------------------------------------------------------------- */
+    background: #f2f2f2f2;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    outline: none; /* TAMBIEN PODEMOS PROBAR CON 1px solid black */
+    font-size: 18px;
+}
+textarea{
+    background: #f2f2f2f2;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    height: 200px;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+button{
+    margin-left:30%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+
+    width: 40%;
+    height: 40px;
+    font-size: 18;
+    
+    background-color: rgb(0, 89, 255);
+}
+button:active{
+    background-color: rgb(0, 0, 255);
+}
+/* ------------------------- AJUSTES DE FOOTER */
+footer{
+    background-image: url("image/computin.jpg");
+    object-fit: cover;
+}
+
+footer h3{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgba(44, 233, 44, 0.842); 
+    text-align: center;
+}
+footer ul{
+    display: block;
+    margin-top: 4%;
+    margin-left: 39%;
+}
+footer ul li{
+    margin-top: 6%;
+    font-size: 22px;
+    list-style: none;
+    text-decoration: none;
+}
+footer ul li a span{
+    color: rgb(245, 245, 245);
+    font-weight: 500;
+    text-shadow:10px 10px 10px  rgb(255, 254, 254);
+}
+
+/* DESARROLLO SMARTPHONE(Siempre es recomendable empezar con las dimensiones para dispositivos SMARTPHONE) */
+header{
+    grid-area: header;
+
+    background-image: url("image/computin.jpg"); 
+    object-fit: cover;
+    object-position:center;
+
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+section{
+    grid-area: section;
+    background-color:rgb(0, 0, 0);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    justify-content: space-around;
+    align-items:flex-start;
+}
+main{
+    grid-area: main;
+}
+.formulario{
+    grid-area: formulario;
+}
+footer{
+    grid-area: footer;
+    background-color: rgb(94, 114, 202);
+}
+.container{
+    display: grid;
+    gap: 6px;
+    grid-template:
+    "header"       180px
+    "section"      auto 
+    "main"         auto
+    "formulario"   auto
+    "footer"       160px
+    ;
+}
+/*DISEÑO PARA TABLETS*/
+@media (min-width: 600px){
+    .container{
+        grid-template:    
+        "header header"          240px
+        "section main"           auto
+        "formulario formulario"  auto
+        "footer footer"          220px /
+        260px  auto 
+        ;
+    }
+    .foto{
+        height: 80%;
+        width: auto;
+        flex: 1;
+    }
+    
+    .menu ul li a{
+        font-size: 22px;
+        padding: 5px;        
+    }
+    .info h3{
+        font-size: 24px;
+        padding: 5px;
+        font-weight: 600;
+    }
+    .item-section{
+        height: 90px;
+    }
+    .item-section img{  
+        margin-top: 20px;
+        margin-right: 50px;
+        max-height: 50px;
+    }
+    .item-section:hover{
+        width: 70%;        
+    }
+    .main-foto{
+        height: 200px;
+        width: 200px;
+
+        padding: 30px;
+    }
+}
+/*DISEÑO PARA PC*/
+@media (min-width: 900px){
+    .container{
+        grid-template:    
+        "header header"          200px 
+        "section main"           auto
+        "formulario formulario"  auto
+        "footer footer"          300px /
+         400px  auto    
+        ;
+    }
+    .foto{
+        height: 100%;
+        width: auto;
+        flex:1;
+    }
+    .menu ul li a{
+        font-size: 28px;
+        padding: 8px;        
+    }
+    .info h3{
+        font-size: 38px;
+        padding: 5px;
+        font-weight: 600;
+    }
+    .item-section{
+        height: 100px;
+    }
+    .item-section img{  
+        margin-top: 10px;
+        margin-right: 80px;
+        max-height: 80px;
+    }
+    .item-section:hover{
+        width: 80%;        
+    }
+    .main-foto{
+        height: 300px;
+        width: 300px;
+
+        padding: 50px;
+    }
+}
